@@ -1,11 +1,13 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png" />
+  <ReverseString />
 </template>
 
 <script>
+import ReverseString from "./components/ReverseString";
+
 export default {
   name: "App",
-  components: {},
+  components: { ReverseString },
 };
 </script>
 
