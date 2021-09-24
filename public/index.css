@@ -1,0 +1,39 @@
+body{
+    overflow-x: hidden;
+    overflow-y: scroll;
+}
+::-webkit-scrollbar {width:0;}
+nav{
+    display: flex;
+    justify-content: space-around;
+    background-color: rgba(241, 158, 63, 0.93);
+}
+main{
+
+}
+aside{
+    background-color: rgba(241, 158, 63, 0.93);
+    float: left;
+    /*min-height: 100vh;*/
+}
+footer{
+    position: relative;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+}
+#clear{
+    clear: both;
+}
+
+header, footer{
+    background-color: #5a2002;
+    color: rgba(255, 214, 177, 0.93);
+}
+header, nav, main, aside, footer{
+    text-align: center;
+    padding: 20px;
+}
+a{
+    color: #5a2002;
+}
