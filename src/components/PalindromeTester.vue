@@ -86,4 +86,30 @@ export default {
 };
 </script>
 
-<style scoped></style>
+<style scoped lang="sass">
+#palindromeTester
+  padding: 10px
+  margin: 10px
+  border: 2px dashed #5a2002
+  border-radius: 20px
+  display: flex
+  flex-direction: column
+  align-items: center
+  font: 30px "Monospaced"
+
+#palindromeInput
+  font: 30px "Monospaced"
+  color: antiquewhite
+  width: 500px
+  background-color: black
+  border-radius: 20px
+  margin: 10px
+  padding: 5px
+  text-align: center
+
+button
+  font-size: 50px
+  border-radius: 20px
+  padding: 5px
+  width: auto
+</style>
