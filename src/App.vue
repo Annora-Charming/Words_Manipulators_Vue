@@ -1,13 +1,15 @@
 <template>
   <ReverseString />
+  <PalindromeTester />
 </template>
 
 <script>
 import ReverseString from "./components/ReverseString";
+import PalindromeTester from "./components/PalindromeTester";
 
 export default {
   name: "App",
-  components: { ReverseString },
+  components: { PalindromeTester, ReverseString },
 };
 </script>
 
