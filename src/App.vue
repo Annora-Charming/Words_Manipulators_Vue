@@ -1,15 +1,17 @@
 <template>
   <ReverseString />
   <PalindromeTester />
+  <MultipleSelectBox />
 </template>
 
 <script>
 import ReverseString from "./components/ReverseString";
 import PalindromeTester from "./components/PalindromeTester";
+import MultipleSelectBox from "./components/MultipleSelectBox";
 
 export default {
   name: "App",
-  components: { PalindromeTester, ReverseString },
+  components: { MultipleSelectBox, PalindromeTester, ReverseString },
 };
 </script>
 
