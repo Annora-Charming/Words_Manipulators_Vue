@@ -56,12 +56,12 @@ export default {
     check(value) {
       let filteredArr = this.prepare(value);
       this.mirror = false;
-      if (filteredArr.length % 2 === 0) {
-        this.mirrorCheck(value, filteredArr);
-      }
       for (let i = 0; i < filteredArr.length / 2; i++) {
         if (filteredArr[i] === filteredArr[filteredArr.length - i - 1]) {
           this.palindrome = true;
+          if (filteredArr.length % 2 === 0) {
+            this.mirrorCheck(value, filteredArr);
+          }
         } else {
           this.palindrome = false;
           break;
