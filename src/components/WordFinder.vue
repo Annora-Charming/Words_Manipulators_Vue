@@ -8,7 +8,11 @@
       v-on:keypress.enter="getWords()"
     />
     <button id="wordsFinderButton" v-on:click="getWords">get</button>
-    {{ filtrate }}
+    <ul>
+      <li v-for="(item, id) in words" v-bind:key="id">
+        {{ item }}
+      </li>
+    </ul>
   </div>
 </template>
 
@@ -27,20 +31,32 @@ export default {
       this.words = await response.json();
     },
   },
-  computed: {
-    filtrate() {
-      let filtratedWords = [];
-      for (
-        let i = 0;
-        i < this.words.length && filtratedWords.length < 10;
-        i++
-      ) {
-        filtratedWords.push(this.words[i]);
-      }
-      return filtratedWords;
-    },
-  },
+  computed: {},
 };
 </script>
 
-<style scoped></style>
+<style scoped lang="sass">
+#wordFinder
+  padding: 10px
+  margin: 10px
+  border: 2px dashed #5a2002
+  border-radius: 20px
+  display: flex
+  flex-direction: column
+  align-items: center
+  font: 30px "Monospaced"
+
+#wordFinderInput
+  font: 30px "Monospaced"
+  color: antiquewhite
+  width: 500px
+  background-color: black
+  border-radius: 20px
+  margin: 10px
+  padding: 5px
+  text-align: center
+
+#wordsFinderButton
+  font-size: 20px
+  width: auto
+</style>
