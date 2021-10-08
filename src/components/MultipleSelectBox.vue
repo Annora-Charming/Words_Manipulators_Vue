@@ -1,5 +1,5 @@
 <template>
-  <div id="multipleSelectBox">
+  <div class="componentWrapper">
     <h2>Sound Selector</h2>
     <div>
       <input
@@ -44,15 +44,6 @@ export default {
 </script>
 
 <style scoped lang="sass">
-#multipleSelectBox
-  padding: 10px
-  margin: 10px
-  border: 2px dashed #5a2002
-  border-radius: 20px
-  display: flex
-  flex-direction: column
-  align-items: center
-  font: 30px "Monospaced"
 
 ul, select
   border: 2px dashed #5a2002
