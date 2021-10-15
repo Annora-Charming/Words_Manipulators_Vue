@@ -28,7 +28,7 @@ export default {
   data() {
     return {
       value: "",
-      words: [],
+      words: "",
       word: "",
     };
   },
@@ -39,7 +39,6 @@ export default {
     // },
     async getWords() {
       const response = await fetch("http://localhost:3001/?q=" + this.value);
-      console.log(response, response.json());
       this.words = await response.json();
     },
   },
