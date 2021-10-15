@@ -11,12 +11,13 @@
       <button id="wordsFinderButton" v-on:click="getWords">get</button>
     </div>
     <div id="listWrapper">
-      <ul>
-        <li v-for="(item, id) in words" v-bind:key="id">
-          {{ item.name }}
-          <span>{{ item.description }}</span>
-        </li>
-      </ul>
+      <!--      <ul>-->
+      <!--        <li v-for="(item, id) in words" v-bind:key="id">-->
+      <!--          {{ item.name }}-->
+      <!--          <span>{{ item.description }}</span>-->
+      <!--        </li>-->
+      <!--      </ul>-->
+      {{ words }}
     </div>
   </div>
 </template>
@@ -32,8 +33,13 @@ export default {
     };
   },
   methods: {
+    // async getWords() {
+    //   const response = await fetch("http://localhost:3001/?q=" + this.value);
+    //   this.words = await response.json();
+    // },
     async getWords() {
       const response = await fetch("http://localhost:3001/?q=" + this.value);
+      console.log(response, response.json());
       this.words = await response.json();
     },
   },
@@ -80,6 +86,7 @@ li span
 
 li:hover span
   border: #5a2002 1px dotted
+  background-color: white
   padding: 5px
   display: block
   //!!! ^ important!!!
