@@ -47,7 +47,6 @@ export default {
       this.translation = await response.json();
     },
   },
-  computed: {},
 };
 </script>
 

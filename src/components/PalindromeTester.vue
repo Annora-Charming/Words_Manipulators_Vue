@@ -51,10 +51,9 @@ export default {
       ],
     };
   },
-  computed: {},
   methods: {
     check(value) {
-      let filteredArr = this.prepare(value);
+      const filteredArr = this.prepare(value);
       this.mirror = false;
       for (let i = 0; i < filteredArr.length / 2; i++) {
         if (filteredArr[i] === filteredArr[filteredArr.length - i - 1]) {
@@ -69,7 +68,7 @@ export default {
       }
     },
     prepare(value) {
-      let filteredValue = value.toLowerCase().split("");
+      const filteredValue = value.toLowerCase().split("");
       return filteredValue.filter((letter) => letter !== " ");
     },
     mirrorCheck(value, filteredArr) {

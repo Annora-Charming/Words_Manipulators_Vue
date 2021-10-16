@@ -31,7 +31,6 @@ export default {
       chosenSound: [],
     };
   },
-  computed: {},
   methods: {
     addToList(value) {
       if (value.trim().length > 0) {
