@@ -3,6 +3,7 @@
   <PalindromeTester />
   <MultipleSelectBox />
   <WordFinder />
+  <Translator />
 </template>
 
 <script>
@@ -10,6 +11,7 @@ import ReverseString from "./components/ReverseString";
 import PalindromeTester from "./components/PalindromeTester";
 import MultipleSelectBox from "./components/MultipleSelectBox";
 import WordFinder from "./components/WordFinder";
+import Translator from "./components/Translator";
 
 export default {
   name: "App",
@@ -18,6 +20,7 @@ export default {
     MultipleSelectBox,
     PalindromeTester,
     ReverseString,
+    Translator,
   },
 };
 </script>

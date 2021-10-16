@@ -1,24 +1,28 @@
 <template>
   <div class="componentWrapper">
     <div id="formWrapper">
-      <h2>Word Finder</h2>
+      <h2>Word Finder an Translator</h2>
       <input
         id="wordFinderInput"
         placeholder="Start entering here"
         v-model="value"
         v-on:keypress.enter="getWords()"
       />
-      <button id="wordsFinderButton" v-on:click="getWords">get</button>
+      <button id="wordsFinderButton" v-on:click="getWords">get words</button>
+      {{ translation }}
     </div>
     <div id="listWrapper">
-      <!--      <ul>-->
-      <!--        <li v-for="(item, id) in words" v-bind:key="id">-->
-      <!--          {{ item.name }}-->
-      <!--          <span>{{ item.description }}</span>-->
-      <!--        </li>-->
-      <!--      </ul>-->
-      {{ words }}
+      <ul>
+        <li
+          v-for="(item, id) in words"
+          v-bind:key="id"
+          v-on:click="getTranslation(item)"
+        >
+          {{ item }}
+        </li>
+      </ul>
     </div>
+    <p style="font-size: 15px">Click on word to get its translation</p>
   </div>
 </template>
 
@@ -28,18 +32,19 @@ export default {
   data() {
     return {
       value: "",
-      words: "",
+      words: [],
       word: "",
+      translation: "",
     };
   },
   methods: {
-    // async getWords() {
-    //   const response = await fetch("http://localhost:3001/?q=" + this.value);
-    //   this.words = await response.json();
-    // },
     async getWords() {
       const response = await fetch("http://localhost:3001/?q=" + this.value);
       this.words = await response.json();
+    },
+    async getTranslation(item) {
+      const response = await fetch("http://localhost:3001/translate?z=" + item);
+      this.translation = await response.json();
     },
   },
   computed: {},
@@ -69,6 +74,9 @@ export default {
 #listWrapper
   width: 50%
   padding: 0 20px
+  margin-top: 10px
+  border: 2px dashed #5a2002
+  border-radius: 20px
 
 ul
   list-style: none inside
@@ -78,22 +86,4 @@ ul
 li:hover
   cursor: help
   position: relative
-
-li span
-  font-size: 20px
-  display: none
-
-li:hover span
-  border: #5a2002 1px dotted
-  background-color: white
-  padding: 5px
-  display: block
-  //!!! ^ important!!!
-  left: 100px
-  margin: 10px
-  width: 500px
-  height: auto
-  position: absolute
-  top: 1px
-  text-decoration: none
 </style>

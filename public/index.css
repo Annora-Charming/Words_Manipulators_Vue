@@ -9,12 +9,12 @@ nav{
     background-color: rgba(241, 158, 63, 0.93);
 }
 main{
-
+    display: flex;
 }
 aside{
     background-color: rgba(241, 158, 63, 0.93);
     float: left;
-    height: 2000px;
+    height: 2300px;
     margin-right: 50px;
     /*min-height: 100vh;*/
 }
