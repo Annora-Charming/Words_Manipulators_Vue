@@ -27,3 +27,10 @@ npm run lint
 
 ### Customize configuration
 See [Configuration Reference](https://cli.vuejs.org/config/).
+
+
+![img.png](public/images/Reverser.png)
+![img.png](public/images/Palindrome.png)
+![img.png](public/images/Sound.png)
+![img.png](public/images/Finder.png)
+![img.png](public/images/Translator.png)
