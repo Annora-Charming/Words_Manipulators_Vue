@@ -1,5 +1,5 @@
 <template>
-  <div id="reverseString">
+  <div class="componentWrapper">
     <h2>String Reverser</h2>
     <input id="reverserInput" v-model="value" />
     <div id="buttons">
@@ -31,8 +31,8 @@ export default {
 };
 </script>
 
-<style scoped lang="sass">
-#reverseString
+<style lang="sass">
+.componentWrapper
   padding: 10px
   margin: 10px
   border: 2px dashed #5a2002

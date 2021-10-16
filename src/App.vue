@@ -2,16 +2,23 @@
   <ReverseString />
   <PalindromeTester />
   <MultipleSelectBox />
+  <WordFinder />
 </template>
 
 <script>
 import ReverseString from "./components/ReverseString";
 import PalindromeTester from "./components/PalindromeTester";
 import MultipleSelectBox from "./components/MultipleSelectBox";
+import WordFinder from "./components/WordFinder";
 
 export default {
   name: "App",
-  components: { MultipleSelectBox, PalindromeTester, ReverseString },
+  components: {
+    WordFinder,
+    MultipleSelectBox,
+    PalindromeTester,
+    ReverseString,
+  },
 };
 </script>
 

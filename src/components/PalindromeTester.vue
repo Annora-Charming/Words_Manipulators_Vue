@@ -1,5 +1,5 @@
 <template>
-  <div id="palindromeTester">
+  <div class="componentWrapper">
     <h2>Palindrome Tester</h2>
     <input
       v-on:keypress.enter="check(value)"
@@ -87,16 +87,6 @@ export default {
 </script>
 
 <style scoped lang="sass">
-#palindromeTester
-  padding: 10px
-  margin: 10px
-  border: 2px dashed #5a2002
-  border-radius: 20px
-  display: flex
-  flex-direction: column
-  align-items: center
-  font: 30px "Monospaced"
-
 #palindromeInput
   font: 30px "Monospaced"
   color: antiquewhite
