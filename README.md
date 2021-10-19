@@ -1,4 +1,14 @@
-# lab1_vue
+Для работы необходимо запустить сервер с репозитория - https://github.com/Annora-Charming/words.git
+
+Технологии использованные в проекте
+
+*Vue (1)
+*Тесты (3) (не всё покрыто)
+*Линтер (3)
+*Обращение в сеть (3)
+
+Итого - 10/16
+(https://github.com/dmitryweiner/lectures/blob/main/907%D1%81%D0%B2.md)
 
 ## Project setup
 ```
@@ -10,27 +20,16 @@ npm install
 npm run serve
 ```
 
-### Compiles and minifies for production
-```
-npm run build
-```
-
-### Run your unit tests
-```
-npm run test:unit
-```
-
 ### Lints and fixes files
 ```
 npm run lint
 ```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
-
-
+Компонент Reverser
+Введенная в поле строка будет выведена в обратном порядке. Нажатие на кнопки добавляет определнную последовательность символов к введенной строке, кнопка "ERROR" перезаписывает строку полностью, а кнопка "" - очищает поле ввода
 ![img.png](public/images/Reverser.png)
 ![img.png](public/images/Palindrome.png)
 ![img.png](public/images/Sound.png)
 ![img.png](public/images/Finder.png)
 ![img.png](public/images/Translator.png)
+
+Что еще можно сделать:
