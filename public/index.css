@@ -9,12 +9,20 @@ nav{
     background-color: rgba(241, 158, 63, 0.93);
 }
 main{
-
+    display: flex;
+    justify-content: space-around;
+    flex-grow: 1;
 }
 aside{
     background-color: rgba(241, 158, 63, 0.93);
     float: left;
+    height: 2300px;
+    width: 10%;
+    margin-right: 50px;
     /*min-height: 100vh;*/
+}
+#app{
+    flex-grow: 2;
 }
 footer{
     position: relative;
